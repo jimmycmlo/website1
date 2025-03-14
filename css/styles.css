@@ -481,6 +481,42 @@ nav {
     color: rgba(255, 255, 255, 0.7);
 }
 
+/* Status badges for solutions */
+.status-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-badge.available {
+    background-color: rgba(0, 255, 255, 0.15);
+    color: var(--secondary-color);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+}
+
+.status-badge.coming-soon {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animation for coming soon badge */
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.status-badge.coming-soon {
+    animation: pulse 2s infinite ease-in-out;
+}
+
 /* ===== Technology Section ===== */
 .technology {
     background-color: #1a1a1a;
@@ -1108,4 +1144,16 @@ header.scrolled {
 .form-group select option {
     background-color: var(--dark-color);
     color: var(--light-text);
+}
+
+.footer-coming-soon {
+    position: relative;
+    opacity: 0.7;
+}
+
+.footer-coming-soon::after {
+    content: ' (Coming Soon)';
+    font-size: 0.8rem;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.5);
 } 
