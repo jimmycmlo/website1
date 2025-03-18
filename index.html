@@ -249,7 +249,7 @@
             </div>
             <div class="contact-container">
                 <div class="contact-form">
-                    <form action="https://formspree.io/f/your_formspree_id" method="POST">
+                    <form action="https://formspree.io/f/mdkekrkj" method="POST">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -274,6 +274,10 @@
                             <textarea id="message" name="message" rows="5" placeholder="How can we help with your visual AI needs?" required></textarea>
                         </div>
                         <input type="hidden" name="_subject" value="New contact from Seapines AI Website">
+                        <!-- Honeypot field to prevent spam -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        <!-- Redirect after submission -->
+                        <input type="hidden" name="_next" value="thanks.html">
                         <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>

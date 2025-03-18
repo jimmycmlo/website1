@@ -86,14 +86,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
+            // Simple validation before allowing Formspree submission
+            let isValid = true;
             const formData = new FormData(this);
             const formValues = Object.fromEntries(formData.entries());
-            
-            // Simple validation
-            let isValid = true;
             const requiredFields = ['name', 'email', 'message'];
             
             requiredFields.forEach(field => {
@@ -106,17 +102,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            if (isValid) {
-                // In a real application, you would send this data to a server
-                console.log('Form submitted:', formValues);
-                
-                // Show success message
-                const successMessage = document.createElement('div');
-                successMessage.className = 'success-message';
-                successMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-                
-                this.innerHTML = '';
-                this.appendChild(successMessage);
+            // Prevent submission only if validation fails
+            if (!isValid) {
+                e.preventDefault();
+                console.log('Form validation failed');
+            } else {
+                // Form is valid, let Formspree handle the submission
+                console.log('Form validated, submitting to Formspree');
+                // The form will naturally submit to Formspree
             }
         });
     }
