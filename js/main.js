@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Toggle current answer
                 if (!isActive) {
                     this.classList.add('active');
-                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    answer.style.maxHeight = (answer.scrollHeight + 100) + 'px';
                 }
             });
         });
