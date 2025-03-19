@@ -845,6 +845,7 @@ header.scrolled .nav-links.active {
     gap: 40px;
     position: relative;
     z-index: 1;
+    align-items: flex-start;
 }
 
 .contact-form {
@@ -927,6 +928,11 @@ header.scrolled .nav-links.active {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgba(0, 51, 102, 0.2);
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .info-item {
@@ -936,11 +942,22 @@ header.scrolled .nav-links.active {
     color: var(--light-text);
 }
 
+.info-item:last-child {
+    margin-bottom: 0;
+}
+
 .info-item i {
     font-size: 1.5rem;
     color: var(--secondary-color);
     margin-right: 15px;
     text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    width: 30px;
+    text-align: center;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 1.1rem;
 }
 
 .contact .social-links {
@@ -1197,6 +1214,14 @@ footer::after {
         flex-direction: column;
         gap: 15px;
         text-align: center;
+    }
+    
+    .contact-container {
+        gap: 30px;
+    }
+    
+    .contact-info {
+        margin-top: 20px;
     }
 }
 
@@ -1758,4 +1783,18 @@ footer::after {
 
 .contact-form form {
     margin-bottom: 30px;
+}
+
+.contact-info h3 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.3);
+}
+
+.contact-intro {
+    color: var(--light-text);
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    opacity: 0.9;
 } 
