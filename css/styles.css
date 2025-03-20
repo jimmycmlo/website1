@@ -958,6 +958,8 @@ header.scrolled .nav-links.active {
 .info-item p {
     margin: 0;
     font-size: 1.1rem;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
 .contact .social-links {
