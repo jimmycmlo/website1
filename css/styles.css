@@ -965,18 +965,16 @@ header.scrolled .nav-links.active {
 /* Add mobile-specific styling for contact info text */
 @media (max-width: 768px) {
     .info-item p {
-        color: #ffffff;
-        font-weight: 600;
-        text-shadow: 0 0 8px rgba(0, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
-        letter-spacing: 0.5px;
+        color: rgba(255, 255, 255, 0.9);
+        font-weight: 500;
     }
     
-    /* Make phone number and email text glowing cyan to match site theme */
-    .info-item:nth-child(1) p,
+    /* Make both phone number and email text match exactly with bright cyan color */
+    .info-item:nth-child(1) p, 
     .info-item:nth-child(2) p {
-        color: var(--secondary-color);
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.4);
+        color: var(--secondary-color) !important; /* Force the color with !important */
         font-weight: 700;
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.4);
     }
 }
 
