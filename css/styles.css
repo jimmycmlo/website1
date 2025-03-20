@@ -958,24 +958,6 @@ header.scrolled .nav-links.active {
 .info-item p {
     margin: 0;
     font-size: 1.1rem;
-    color: #ffffff;
-    text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
-}
-
-/* Add mobile-specific styling for contact info text */
-@media (max-width: 768px) {
-    .info-item p {
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 500;
-    }
-    
-    /* Make both phone number and email text match exactly with bright cyan color */
-    .info-item:nth-child(1) p, 
-    .info-item:nth-child(2) p {
-        color: var(--secondary-color) !important; /* Force the color with !important */
-        font-weight: 700;
-        text-shadow: 0 0 10px rgba(0, 255, 255, 0.8), 0 0 20px rgba(0, 255, 255, 0.4);
-    }
 }
 
 .contact .social-links {
