@@ -962,6 +962,16 @@ header.scrolled .nav-links.active {
     text-shadow: 0 0 5px rgba(0, 255, 255, 0.3);
 }
 
+/* Add mobile-specific styling for contact info text */
+@media (max-width: 768px) {
+    .info-item p {
+        color: #ffffff;
+        font-weight: 600;
+        text-shadow: 0 0 8px rgba(0, 255, 255, 0.5), 0 0 15px rgba(255, 255, 255, 0.3);
+        letter-spacing: 0.5px;
+    }
+}
+
 .contact .social-links {
     display: flex;
     gap: 15px;
