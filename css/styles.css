@@ -1798,4 +1798,208 @@ footer::after {
     margin-bottom: 25px;
     font-size: 1.1rem;
     opacity: 0.9;
+}
+
+/* ===== Privacy Section ===== */
+.privacy {
+    background-color: var(--dark-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.privacy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.privacy-content {
+    position: relative;
+    z-index: 1;
+}
+
+.privacy-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.privacy-text > p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.privacy-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.privacy-feature {
+    background-color: rgba(0, 51, 102, 0.3);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    transition: var(--transition);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.privacy-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+    border-color: rgba(0, 255, 255, 0.3);
+}
+
+.privacy-feature i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.privacy-feature h4 {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.privacy-feature p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.privacy-cta {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.privacy-cta p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .privacy-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .privacy-feature {
+        padding: 20px;
+    }
+}
+
+/* ===== Privacy Policy Page ===== */
+.privacy-policy {
+    padding: 150px 0 80px;
+    background-color: var(--dark-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.privacy-policy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 70% 30%, rgba(0, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.privacy-policy .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.privacy-policy .section-header h1 {
+    font-size: 2.5rem;
+    color: var(--light-text);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.privacy-policy .section-header p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+.privacy-policy .privacy-content {
+    background-color: rgba(0, 51, 102, 0.3);
+    border-radius: 10px;
+    padding: 40px;
+    border: 1px solid rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+}
+
+.privacy-policy h2 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin: 30px 0 15px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.privacy-policy h2:first-child {
+    margin-top: 0;
+}
+
+.privacy-policy p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.privacy-policy ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.privacy-policy ul li {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.privacy-policy ul li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.privacy-policy a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.privacy-policy a:hover {
+    color: var(--light-text);
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    .privacy-policy {
+        padding: 120px 0 60px;
+    }
+    
+    .privacy-policy .privacy-content {
+        padding: 30px 20px;
+    }
+    
+    .privacy-policy h2 {
+        font-size: 1.5rem;
+    }
 } 
